@@ -1,0 +1,240 @@
+%##############################################################################
+% Packages
+%##############################################################################
+
+%<*tag1>
+\usepackage{amsfonts,amssymb}                   %Standard math packages.
+\usepackage{centernot,enumerate,mathrsfs}       %Not-divides symbol; enumerate arguments;\mathscr font.
+\usepackage{color}                              %Colors.
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor} %More colors!
+\usepackage{hyperref}                           %Linkable items.
+\usepackage[utf8x]{inputenc}                    %Support for some unicode (e.g. emdash) without using XeTeX.
+\usepackage{tikz}                               %Create graphics.
+\usepackage{cancel}
+%\usepackage{tikz-cd}                            %Commutative diagrams.
+\usetikzlibrary{patterns,shapes,snakes}
+\usepackage{graphicx}                           %Import graphics.
+%\usepackage[all,cmtip]{xy}                     %Commutative diagrams.
+%</tag1>
+\usepackage{titlesec}                           %Reformats sections.
+
+%##############################################################################
+% Font, Margins, & Spacing
+%##############################################################################
+
+\renewcommand{\familydefault}{\sfdefault}       %Font
+\parindent0em
+\parskip1em
+\allowdisplaybreaks
+
+%##############################################################################
+% Ordering of Paper
+%##############################################################################
+
+\numberwithin{equation}{section}    %Equation counter.
+\newtheorem{thm}{Theorem}[section]  %Theorem Counter.
+                        %Section & Subsection Counter.
+\newcommand{\twodigits}[1]{\ifnum#1<10 0#1\else #1\fi}  %Appends 0's.
+\newcommand{\sectionbreak}{\clearpage}      %Breaks sections to pages.
+
+\titleformat{\section}[display]{\scshape\fillast}{Lecture \oldstylenums{\twodigits{\thesection}}}{-.5em}{\Large}
+\titleformat{\subsection}{\scshape\large}{\S\thesubsection}{0.5em}{}
+\titlespacing*{\section}{3pc}{*3}{*2}[3pc]
+%Issues:
+%       HEADERS: Set only page number for first lecture-page, alternate author name and lecture title after.
+%       DATE: Set footnote on title, without number, but allow for footnotes with numbers in general.
+%       TABLE OF CONTENTS: general formatting, hyperlinks.
+%       SECTION TITLE FORMAT: Do I want to bold the section titles , as it normally is?
+%Wish List:
+%Custom TOC (like GITPreamble's; hyperlinks, general formatting).
+%Custom \section commands (titlesec package).
+
+%##############################################################################
+% Typefont Macros
+%##############################################################################
+
+%<*tag2>
+\renewcommand{\b}{\mathbb}          %Special sets.
+\renewcommand{\c}{\mathcal}         %Schemes, categories, cryptography, logic.
+\newcommand{\f}{\mathfrak}          %Ideals, Lie algebras.
+\newcommand{\s}{\mathscr}              %Alternative: topological spaces, algebras, sheaves, categories.
+
+%\renewcommand{\tt}{\text}            %Spacings: ~,\quad,\qquad,\hspace.
+\renewcommand{\em}[1]{\it{\und{#1}}} %Keywords.
+\renewcommand{\bf}{\textbf}          %Vectors.
+\renewcommand{\it}{\textit}
+\renewcommand{\sc}{\textsc}
+%\newcommand{\ttt}{\texttt}
+\newcommand{\und}{\underline}
+
+
+\renewcommand{\hat}{\widehat}
+\renewcommand{\tilde}{\widetilde}
+\renewcommand{\bar}{\overline}
+\makeatletter
+\def\footnotenonum{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+\newcommand{\circled}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt}{#1}}}}
+\newcommand{\xym}{\xymatrix}
+
+\newcommand{\bA}{\b A}   \newcommand{\bB}{\b B}   \newcommand{\bC}{\b C}
+\newcommand{\bD}{\b D}   \newcommand{\bE}{\b E}   \newcommand{\bF}{\b F}
+\newcommand{\bG}{\b G}   \newcommand{\bH}{\b H}   \newcommand{\bI}{\b I}
+\newcommand{\bJ}{\b J}   \newcommand{\bK}{\b K}   \newcommand{\bL}{\b L}
+\newcommand{\bM}{\b M}   \newcommand{\bN}{\b N}   \newcommand{\bO}{\b O}
+\newcommand{\bP}{\b P}   \newcommand{\bQ}{\b Q}   \newcommand{\bR}{\b R}
+\newcommand{\bS}{\b S}   \newcommand{\bT}{\b T}   \newcommand{\bU}{\b U}
+\newcommand{\bV}{\b V}   \newcommand{\bW}{\b W}   \newcommand{\bX}{\b X}
+\newcommand{\bY}{\b Y}   \newcommand{\bZ}{\b Z}
+
+\newcommand{\cA}{\c A}   \newcommand{\cB}{\c B}   \newcommand{\cC}{\c C}
+\newcommand{\cD}{\c D}   \newcommand{\cE}{\c E}   \newcommand{\cF}{\c F}
+\newcommand{\cG}{\c G}   \newcommand{\cH}{\c H}   \newcommand{\cI}{\c I}
+\newcommand{\cJ}{\c J}   \newcommand{\cK}{\c K}   \newcommand{\cL}{\c L}
+\newcommand{\cM}{\c M}   \newcommand{\cN}{\c N}   \newcommand{\cO}{\c O}
+\newcommand{\cP}{\c P}   \newcommand{\cQ}{\c Q}   \newcommand{\cR}{\c R}
+\newcommand{\cS}{\c S}   \newcommand{\cT}{\c T}   \newcommand{\cU}{\c U}
+\newcommand{\cV}{\c V}   \newcommand{\cW}{\c W}   \newcommand{\cX}{\c X}
+\newcommand{\cY}{\c Y}   \newcommand{\cZ}{\c Z}
+
+\newcommand{\fa}{\f a}   \newcommand{\fb}{\f b}   \newcommand{\fc}{\f c}
+\newcommand{\fd}{\f d}   \newcommand{\fe}{\f e}   \newcommand{\ff}{\f f}
+\newcommand{\fg}{\f g}   \newcommand{\fh}{\f h}   \newcommand{\Fi}{\f i}
+\newcommand{\fj}{\f j}   \newcommand{\fk}{\f k}   \newcommand{\fl}{\f l}
+\newcommand{\fm}{\f m}   \newcommand{\fn}{\f n}   \newcommand{\fo}{\f o}
+\newcommand{\fp}{\f p}   \newcommand{\fq}{\f q}   \newcommand{\fr}{\f r}
+\newcommand{\fs}{\f s}   \newcommand{\ft}{\f t}   \newcommand{\fu}{\f u}
+\newcommand{\fv}{\f v}   \newcommand{\fw}{\f w}   \newcommand{\fx}{\f x}
+\newcommand{\fy}{\f y}   \newcommand{\fz}{\f z}
+
+\newcommand{\sA}{\s A}   \newcommand{\sB}{\s B}   \newcommand{\sC}{\s C}
+\newcommand{\sD}{\s D}   \newcommand{\sE}{\s E}   \newcommand{\sF}{\s F}
+\newcommand{\sG}{\s G}   \newcommand{\sH}{\s H}   \newcommand{\sI}{\s I}
+\newcommand{\sJ}{\s J}   \newcommand{\sK}{\s K}   \newcommand{\sL}{\s L}
+\newcommand{\sM}{\s M}   \newcommand{\sN}{\s N}   \newcommand{\sO}{\s O}
+\newcommand{\sP}{\s P}   \newcommand{\sQ}{\s Q}   \newcommand{\sR}{\s R}
+\newcommand{\sS}{\s S}   \newcommand{\sT}{\s T}   \newcommand{\sU}{\s U}
+\newcommand{\sV}{\s V}   \newcommand{\sW}{\s W}   \newcommand{\sX}{\s X}
+\newcommand{\sY}{\s Y}   \newcommand{\sZ}{\s Z}
+
+%##############################################################################
+% Operator Macros
+%##############################################################################
+
+\newcommand{\Ob}{\operatorname{Ob}}                        %Set-inducing operators.
+\newcommand{\Arr}{\operatorname{Arr}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Coker}{\operatorname{Coker}}
+\newcommand{\Coim}{\operatorname{Coim}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Isom}{\operatorname{Isom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Cone}{\operatorname{Cone}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Inn}{\operatorname{Inn}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Sub}{\operatorname{Sub}}
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\id}{\operatorname{id}}
+
+\newcommand{\del}{\nabla}                       %Arithmetic operators.
+\newcommand{\divv}{\operatorname{div}}
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\curl}{\operatorname{curl}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\pfrac}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\Res}{\operatorname*{Res}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\trace}{\operatorname{trace}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\Nil}{\operatorname{Nil}}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\charr}{\operatorname{char}}
+\newcommand{\disc}{\operatorname{disc}}
+\newcommand{\supr}{\operatorname*{sup}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\sd}{\operatorname{sd}}
+\newcommand{\se}{\operatorname{se}}
+\newcommand{\SD}{\operatorname{SD}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand{\sub}{\subset}                      %Set-theoretic relations.
+\renewcommand{\sup}{\supset}
+\newcommand{\sube}{\subseteq}
+\newcommand{\supe}{\supseteq}
+\newcommand{\rcompact}{\Subset}
+
+\renewcommand{\div}{\mid}                       %Misc.
+\newcommand{\notdiv}{\centernot|}
+\newcommand{\bs}{\backslash}
+\newcommand{\tbs}{\textbackslash}
+\newcommand{\semitimes}{\rtimes}
+\newcommand{\vequal}{\scriptscriptstyle\|}
+\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
+
+%\renewcommand{\to}{\longrightarrow}             %Arrows.
+\newcommand{\ra}{\longrightarrow}             %Arrows.
+\renewcommand{\mapsto}{\longmapsto}
+\newcommand{\lmapsto}{\mathrel{\reflectbox{$\longmapsto$}}}
+\newcommand{\hla}{\lhook\joinrel\relbar\joinrel\leftarrow}
+\newcommand{\hra}{\lhook\joinrel\relbar\joinrel\rightarrow}
+\newcommand{\sqla}{\xymatrix{&\ar@{~>}[l]}}
+\newcommand{\sqra}{\xymatrix{\ar@{~>}[r]&}}
+\newcommand{\complies}{\Longleftarrow}
+\newcommand{\lra}{\longleftrightarrow}
+\newcommand{\epi}{\relbar\joinrel\twoheadrightarrow}
+%\newcommand{\mono}{\relbar\joinrel\rightarrowtail} doesn't work. need the extra bar inside.
+\newcommand{\da}{\downarrow}
+\newcommand{\sla}{\leftarrow}
+\newcommand{\sra}{\rightarrow}
+
+\renewcommand{\abstractname}{Disclaimer}         %Formatting.
+
+%##############################################################################
+% Theorem Macros
+%##############################################################################
+
+\theoremstyle{plain}                             %Standardized.
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{problem}[thm]{Problem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{property}[thm]{Property}
+\newtheorem{theorem}[thm]{Theorem}
+\newtheorem{corollary}[thm]{Corollary}
+\newtheorem{example}[thm]{Example}
+\newtheorem{examples}[thm]{Examples}
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{algorithm}[thm]{Algorithm}           %Computational.
+\newtheorem{procedure}[thm]{Procedure}
+
+\newtheorem{assumption}[thm]{Assumption}         %Less formal.
+\newtheorem*{claim}{Claim}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{convention}[thm]{Convention}
+%</tag2>
+
+%<*tag3>
+\newtheorem{exercise}[thm]{Exercise}             %Interactive.
+\newtheorem{question}[thm]{Question}
+\theoremstyle{definition}
+\newtheorem*{answer}{Answer}
+%</tag3>

@@ -1,0 +1,29 @@
+%##############################################################################
+% Packages
+%##############################################################################
+
+\usepackage{catchfilebetweentags}
+\ExecuteMetaData["/home/dvt/Dropbox/dvt/academics/other/latex-templates/preamble-lecture"]{tag1}
+
+%##############################################################################
+% Paper Margins & Spacing
+%##############################################################################
+
+\parindent0em
+\parskip1em
+
+%##############################################################################
+% Ordering of Paper
+%##############################################################################
+
+\numberwithin{equation}{section}            %Equation counter.
+\newtheorem{thm}{Theorem}[section]          %Theorem Counter.
+
+%##############################################################################
+% Typefont, Operator, & Theorem Macros
+%##############################################################################
+
+\ExecuteMetaData["/home/dvt/Dropbox/dvt/academics/other/latex-templates/preamble-lecture"]{tag2}
+\renewcommand{\em}[1]{\it{#1}}              %Keywords.
+\renewcommand{\abstractname}{Abstract}      %Formatting.
+\ExecuteMetaData["/home/dvt/Dropbox/dvt/academics/other/latex-templates/preamble-lecture"]{tag3}
