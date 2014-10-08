@@ -16,3 +16,8 @@ each use case below:
 ### Research Papers
 * `preamble-research-paper.tex`: The preamble declaring packages, formatting, and macros. To eliminate redundancy, it uses `preamble-lecture.tex` as a dependency in order to recycle code.
 * `research-paper.tex`: A research paper style which takes most formatting guidelines from arXiv.
+
+## Examples
+I use the `listings` package to produce my verbatim environment. Here is an example of what my settings compile to:
+
+![](https://pbs.twimg.com/media/BzYyXZZCcAAvb4R.png)
