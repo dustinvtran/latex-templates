@@ -20,7 +20,7 @@ I use the `listings` package to produce my verbatim environment. Here is an exam
 * `X_lecture.tex`: The master document used in compiling the collection of lecture notes.
 
 ### Problem Sets
-* `pset.cls`: The document class declaring packages, formatting, and macros. To eliminate redundancy, it uses `preamble_lecture.tex` as a dependency in order to recycle code.
+* `pset.cls`: The document class declaring packages, formatting, and macros.
 * `X_psX.tex`: A document style used best for laying out answers to a list of exercises.
 
 ### Research Papers
