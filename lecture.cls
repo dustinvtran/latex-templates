@@ -61,7 +61,7 @@
    \vspace*{4mm}
 }
 
-\newcommand{\lecturetitle}[3]{\handout{#1}{#2}{Lecturer: \instructor}{Date: #3}{Lecture #1}}
+\newcommand{\lecturetitle}[3]{\handout{#1}{#2}{Lecturer: \lecture@instructor}{Date: #3}{Lecture #1}}
 \newcommand{\guestlecturetitle}[4]{\handout{#1}{#2}{Lecturer: #4}{Date: #3}{Lecture #1}}
 
 % Commands for section handouts
