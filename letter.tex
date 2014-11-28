@@ -1,0 +1,76 @@
+%##############################################################################
+% Document Class & Settings
+%##############################################################################
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm}
+\usepackage{graphicx}
+\usepackage{url}
+
+\widowpenalty=1000
+\clubpenalty=1000
+
+\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
+\Large Dustin V.\ Tran}}
+%\includegraphics[width=1.2\linewidth]{logo.png}}}
+\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+%\newlfmP{sigsizea10ex}
+\newlfmP{sigsize=0ex}
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone}
+\PhrEmail{Email}
+
+\lthUiuc
+
+%##############################################################################
+% NAME AND CONTACT INFORMATION
+%##############################################################################
+
+\namefrom{Dustin V.\ Tran}
+\addrfrom{
+    \today\\[10pt]
+    2398 Parker Street, Apt. 20\\
+    Berkeley, CA, 94704-3840
+}
+\phonefrom{(714) 623-5143}
+\emailfrom{dustintran@berkeley.edu}
+
+%##############################################################################
+% ADDRESS AND GREETING/CLOSING
+%##############################################################################
+
+%% Major different ones: c.f., D.E. Shaw, Credit Suisse, Belvedere, Greenhill, Mithril, Diffbot, Apex Leaders, Stitch Fix, Tugboat Yards cover letters.
+%% Change employer.
+%% Change address.
+%% Change reasoning of applying to employer.
+%% Reword quantitative/mathematical/analytic if soft skills are more needed.
+\newcommand{\employer}{X}
+\addrto{
+    X
+}
+
+\greetto{Dear Recruiting Manager,}
+\closeline{Sincerely,
+\\[2ex]\includegraphics[scale=0.5]{img/signature.pdf}\\[0ex]
+}
+
+\begin{document}
+\begin{newlfm}
+
+%##############################################################################
+% LETTER CONTENT
+%##############################################################################
+
+% Desired Length: 200-250 words; and specific to job qualifications and why this company.
+
+It is with immense excitement to have the opportunity to work for \employer{} due to its {high-level techniques and collaboration among the most talented minds.} With a double major in Mathematics and Statistics at UC Berkeley, I believe I have a strong {quantitative} background to more than meet the demands for {the position}. Next September, I am also pursuing a one-year S.M. program at Harvard University in Computational Science \& Engineering.
+
+My {problem solving skills} derive from having taken and excelled in graduate-level courseloads for the past three years. This has allowed me to cultivate indispensable practices: tackle highly intricate problems with a considerable degree of research, collaborate extensively with colleagues, and frequently discuss material with professors during scheduled appointments.
+
+I also have strong {organizational and teamwork} skills. Under a team of three graduate statisticians, we modeled a network of financial institutions in order to quantify contagion and systemic risk within a country. I personally took advantage of the structure of these problems to improve performance, e.g., using a multi-threaded sparse QR algorithm in order to efficently decompose big data.
+
+\employer{} would provide me with the ability to apply my research knowledge to industrial foundations, and also expose me to {finance}---a field I find mathematically captivating. Please let me know if there are any further materials or information that will assist you in processing my application. Thank you for your consideration, and I look forward to hearing from you.
+
+\end{newlfm}
+\end{document}
