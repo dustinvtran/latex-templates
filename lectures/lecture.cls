@@ -127,21 +127,24 @@
 \newenvironment{guestlecture}[4]{\guestlecturetitle{#1}{#2}{#3}{#4}}{}
 \newenvironment{sectionlecture}[3]{\sectionlecturetitle{#1}{#2}{#3}}{}
 
-% misc
-\RequirePackage{amsfonts,amssymb}              % Standard math packages
-\RequirePackage{cancel}                        % Cancel things obliquely
-\RequirePackage{centernot}                     % Not-divides symbol
-\RequirePackage{color}                         % Colors
-\RequirePackage{enumerate}                     % enumerate arguments
-\RequirePackage{graphicx}                      % Import graphics
-%\RequirePackage{hyperref}                      % Linkable items
+%##############################################################################
+% Misc
+% TODO: Organize
+%##############################################################################
+\RequirePackage{amsfonts,amssymb}
+\RequirePackage{cancel}
+\RequirePackage{centernot}
+\RequirePackage{color}
+\RequirePackage{enumerate}
+\RequirePackage{graphicx}
+%\RequirePackage{hyperref}
 %\hypersetup{colorlinks=true,urlcolor=blue}
-\RequirePackage{listings}                      % Custom verbatim environment
-\RequirePackage{mathrsfs}                      % \mathscr font
-\RequirePackage{tikz}                          % Create graphics
-%\RequirePackage{tikz-cd}                      % Commutative diagrams
+\RequirePackage{listings}
+\RequirePackage{mathrsfs}
+\RequirePackage{tikz}
+%\RequirePackage{tikz-cd}
 \usetikzlibrary{patterns,shapes,snakes}
-%\RequirePackage[usenames,dvipsnames,svgnames,table]{xcolor} %More colors!
+%\RequirePackage[usenames,dvipsnames,svgnames,table]{xcolor}
 %\RequirePackage{fontspec, xunicode}
 %\setmonofont{Consolas}
 

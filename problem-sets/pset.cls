@@ -4,24 +4,19 @@
 \ProvidesClass{pset}
 [2013/08/31 v0.01 Harvard ML Assignment Class]
 
-% "(no)submit" argument specifies whether to include credits in header.
-\newif\ifpset@submit
-\DeclareOption{submit}{%
-  \pset@submittrue%
-}
-\DeclareOption{nosubmit}{%
-  \pset@submitfalse%
-}
-
 %##############################################################################
 % Base class
 %##############################################################################
 
+\LoadClass[10pt,letterpaper]{article}
+
+% "(no)submit" argument specifies whether to include credits in header.
+\newif\ifpset@submit
+\DeclareOption{submit}{\pset@submittrue}
+\DeclareOption{nosubmit}{\pset@submitfalse}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ExecuteOptions{submit}
 \ProcessOptions\relax
-
-\LoadClass[10pt,letterpaper]{article}
 
 %##############################################################################
 % Packages
@@ -100,7 +95,7 @@
 \newcommand{\duedate}[1]{\def\pset@duedate{#1}}
 
 %##############################################################################
-% Theorem Styles
+% Environments
 %##############################################################################
 
 \newtheoremstyle{box}
@@ -115,4 +110,93 @@
 \theoremstyle{box}
 \newmdtheoremenv[skipabove=\topsep,skipbelow=\topsep]{problem}{Problem}
 
-\input{"/Users/dvt/Dropbox/dvt/work/other/latex-templates/preamble-lecture.tex"}
+%##############################################################################
+% Misc
+% TODO: Organize
+%##############################################################################
+\RequirePackage{amsfonts,amssymb}
+\RequirePackage{cancel}
+\RequirePackage{centernot}
+\RequirePackage{color}
+\RequirePackage{enumerate}
+\RequirePackage{graphicx}
+%\RequirePackage{hyperref}
+%\hypersetup{colorlinks=true,urlcolor=blue}
+\RequirePackage{listings}
+\RequirePackage{mathrsfs}
+\RequirePackage{tikz}
+%\RequirePackage{tikz-cd}
+\usetikzlibrary{patterns,shapes,snakes}
+%\RequirePackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\RequirePackage{fontspec, xunicode}
+%\setmonofont{Consolas}
+
+% Emulate markdown's light grey background for monospace.
+\usepackage{soul}
+\definecolor{Light}{gray}{.96}
+\sethlcolor{Light}
+\let\OldTexttt\texttt
+\renewcommand{\texttt}[1]{\OldTexttt{\hl{#1}}}% will affect all \texttt
+
+% Use knitr's colorscheme.
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\definecolor{hlnum}{rgb}{0.686,0.059,0.569}
+\definecolor{hlstr}{rgb}{0.192,0.494,0.8}
+\definecolor{hlcom}{rgb}{0.678,0.584,0.686}
+\definecolor{hlopt}{rgb}{0,0,0}
+\definecolor{hlstd}{rgb}{0.345,0.345,0.345}
+\definecolor{hlkwa}{rgb}{0.161,0.373,0.58}
+\definecolor{hlkwb}{rgb}{0.69,0.353,0.396}
+\definecolor{hlkwc}{rgb}{0.333,0.667,0.333}
+\definecolor{hlkwd}{rgb}{0.737,0.353,0.396}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}
+
+\lstset{
+  backgroundcolor=\color{shadecolor},
+  basicstyle=\color{hlstd}\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  %breaklines=true,
+  captionpos=b,
+  commentstyle=\color{hlcom},
+  deletekeywords={...},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  frame=lines,
+  keepspaces=true,
+  keywordstyle=\color{hlkwb},
+  morekeywords={*,...},
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\tiny\color{hlstd},
+  rulecolor=\color{hlstd},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{hlstr},
+  tabsize=2,
+  title=\lstname
+}
+
+%##############################################################################
+% Operator Macros
+%##############################################################################
+
+\newcommand\given[1][]{\:#1\vert\:}
+
+%##############################################################################
+% Environments
+%##############################################################################
+
+\newtheorem{theorem}{Theorem}[]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{property}[theorem]{Property}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
