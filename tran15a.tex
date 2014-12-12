@@ -1,0 +1,40 @@
+\documentclass[twoside,11pt]{article}
+\usepackage{jmlr2e}
+\usepackage{amsmath}
+
+% Definitions of handy macros can go here
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+\newcommand\given[1][]{\:#1\vert\:}
+
+% Heading arguments are {volume}{year}{pages}{submitted}{published}{author-full-names}
+%\jmlrheading{1}{2000}{1-48}{4/00}{10/00}{Marina Meil\u{a} and Michael I. Jordan}
+\def\jmlrheading{\thispagestyle{plain}}
+\jmlrheading{}
+
+% Short headings should be running head and authors last names
+\ShortHeadings{Averaged implicit stochastic gradient descent}{Tran}
+\firstpageno{1}
+
+\begin{document}
+
+\title{Averaged implicit stochastic gradient descent}
+\author{\name Dustin Tran \email dtran@g.harvard.edu\\
+\addr Institute for Applied Computational Science\\
+Harvard University\\
+Cambridge, MA 02138, USA
+}
+
+\editor{}
+
+\maketitle
+\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
+\end{abstract}
+
+\bibliography{tran15a}
+
+\end{document}

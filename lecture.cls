@@ -196,9 +196,4 @@
 % Operator Macros
 %##############################################################################
 
-% "Given that" operator, with optional resizing argument
-\makeatletter
-\def\given{\@ifnextchar[{\@with}{\@without}}
-\def\@with[#1]{\:#1\vert\:}
-\def\@without{\:\vert\:}
-\makeatother
+\newcommand\given[1][]{\:#1\vert\:}

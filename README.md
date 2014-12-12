@@ -24,5 +24,6 @@ I use the `listings` package to produce my verbatim environment. Here is an exam
 * `X_psX.tex`: A template for documents which lay out answers to a list of exercises.
 
 ### Research Papers
-* `preamble-research-paper.tex`: (deprecated) The preamble declaring packages, formatting, and macros. To eliminate redundancy, it uses `preamble-lecture.tex` as a dependency in order to recycle code.
-* `research_paper.tex`: A research paper style which takes most formatting guidelines from arXiv.
+* `tran15a.tex`:
+* `tran15.bbl`:
+* `jmlr2e.sty`: The default styles I write papers in, taken from [JMLR](http://www.jmlr.org/author-info.html#Submission).
