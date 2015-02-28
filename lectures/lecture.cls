@@ -102,7 +102,7 @@
 
 \title{\lecture@course}
 \author{
-  Instructor: Professor \lecture@instructor\\[3ex]
+  Instructor: \lecture@instructor\\[3ex]
   \lecture@name
 }
 
@@ -110,6 +110,7 @@
 % Environments
 %##############################################################################
 
+\RequirePackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{assumption}[theorem]{Assumption}
@@ -200,3 +201,6 @@
 %##############################################################################
 
 \newcommand\given[1][]{\:#1\vert\:}
+\newcommand{\todo}[1]{\textcolor{red}{xx TODO: #1  xx }}
+\newcommand{\eminus}{\text{\sc{e}-}}
+\newcommand{\e}{\text{\sc{e}}}

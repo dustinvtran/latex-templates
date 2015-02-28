@@ -114,7 +114,7 @@
 % Misc
 % TODO: Organize
 %##############################################################################
-\RequirePackage{amsfonts,amssymb}
+\RequirePackage{amsfonts,amssymb,amsthm}
 \RequirePackage{cancel}
 \RequirePackage{centernot}
 \RequirePackage{color}
@@ -183,6 +183,9 @@
 %##############################################################################
 
 \newcommand\given[1][]{\:#1\vert\:}
+\newcommand{\todo}[1]{\textcolor{red}{xx TODO: #1  xx }}
+\newcommand{\eminus}{\text{\sc{e}-}}
+\newcommand{\e}{\text{\sc{e}}}
 
 %##############################################################################
 % Environments
