@@ -9,7 +9,9 @@
   \addtocounter{footnote}{-1}%
   \endgroup
 }
-\newcommand\given[1][]{\:#1\vert\:}
+\newcommand{\todo}[1]{\textcolor{red}{xx TODO: #1  xx }}
+\newcommand{\eminus}{\text{\sc{e}-}}
+\newcommand{\e}{\text{\sc{e}}}
 
 % Heading arguments are {volume}{year}{pages}{submitted}{published}{author-full-names}
 %\jmlrheading{1}{2000}{1-48}{4/00}{10/00}{Marina Meil\u{a} and Michael I. Jordan}
@@ -17,14 +19,14 @@
 \jmlrheading{}
 
 % Short headings should be running head and authors last names
-\ShortHeadings{Averaged implicit stochastic gradient descent}{Tran}
+\ShortHeadings{Super duper optimal model and inference procedure}{Tran}
 \firstpageno{1}
 
 \begin{document}
 
-\title{Averaged implicit stochastic gradient descent}
+\title{Super duper optimal model and inference procedure}
 \author{\name Dustin Tran \email dtran@g.harvard.edu\\
-\addr Institute for Applied Computational Science\\
+\addr Department of Statistics\\
 Harvard University\\
 Cambridge, MA 02138, USA
 }
@@ -35,6 +37,7 @@ Cambridge, MA 02138, USA
 \begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
 \end{abstract}
 
+\nocite{*}
 \bibliography{tran15a}
 
 \end{document}
