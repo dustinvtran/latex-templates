@@ -123,6 +123,7 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}[theorem]{Example}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
 
 \newenvironment{lecture}[3]{\lecturetitle{#1}{#2}{#3}}{}
 \newenvironment{guestlecture}[4]{\guestlecturetitle{#1}{#2}{#3}{#4}}{}
