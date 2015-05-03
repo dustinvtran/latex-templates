@@ -3,6 +3,8 @@
 \usepackage{amsmath}
 
 % Definitions of handy macros can go here
+\usepackage{algorithm}
+\usepackage{algorithmic}
 \newcommand\blfootnote[1]{%
   \begingroup
   \renewcommand\thefootnote{}\footnote{#1}%
@@ -36,6 +38,25 @@ Cambridge, MA 02138, USA
 \maketitle
 \begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
 \end{abstract}
+
+\if0
+\begin{algorithm}[tb]
+  \caption{Bubble Sort}
+  \label{alg:example}
+\begin{algorithmic}
+  \STATE {\bfseries Input:} data $x_i$, size $m$
+  \REPEAT
+  \STATE Initialize $noChange = true$.
+  \FOR{$i=1$ {\bfseries to} $m-1$}
+    \IF{$x_i > x_{i+1}$}
+      \STATE Swap $x_i$ and $x_{i+1}$
+      \STATE $noChange = false$
+    \ENDIF
+  \ENDFOR
+  \UNTIL{$noChange$ is $true$}
+\end{algorithmic}
+\end{algorithm}
+\fi
 
 \nocite{*}
 \bibliography{tran15a}
