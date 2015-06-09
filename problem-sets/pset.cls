@@ -31,6 +31,7 @@
 \RequirePackage{fullpage}
 \RequirePackage{graphicx}
 \RequirePackage{mdframed}
+\RequirePackage{todonotes}
 
 %##############################################################################
 % Page Headings
@@ -183,7 +184,6 @@
 %##############################################################################
 
 \newcommand\given[1][]{\:#1\vert\:}
-\newcommand{\todo}[1]{\textcolor{red}{xx TODO: #1  xx }}
 \newcommand{\eminus}{\text{\sc{e}-}}
 \newcommand{\e}{\text{\sc{e}}}
 
