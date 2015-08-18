@@ -25,9 +25,12 @@ example of what my settings compile to:
 * `pset.cls`: The document class declaring packages, formatting, and macros.
 * `X_psX.tex`: A template for documents which lay out answers to a list of exercises.
 
-### Research Papers
+### Papers
 * `jmlr2e.sty`: The document class declaring packages, formatting, and macros,
   taken from [JMLR](http://www.jmlr.org/author-info.html#Submission).
 * `tran15.bib`: The bibliography.
 * `tran15a.tex`: A template for personal notes, course project write-ups, and
   unstylized conference or journal papers.
+
+* `arxiv.bib`: The bibliography.
+* `arxiv.tex`: A template for whenever I submit generic-formatted arXiv preprints.
