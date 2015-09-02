@@ -1,42 +1,61 @@
+\documentclass[openany,11pt]{book}
+\usepackage{jmlr2e_edited}
+\input{preamble_lecture.tex}
+\input{preamble/preamble.tex}
+\input{preamble/preamble_acronyms.tex}
+\input{preamble/preamble_math.tex}
+\input{preamble/preamble_tikz.tex}
 % [Delete when using template]
-% department course_number course_title
-% first_name last_name
+% department course_number
+% course_title
 % first_name last_name
 % term
 % [Delete when using template]
-\documentclass{lecture}
-\name{Dustin Tran}
-\course{X X X}
-\instructor{X X}
-\assistant{X X}
-\date{X}
+\newcommand{\xnewcommand}[2]{\newcommand{#1}{#2\xspace}}
+\xnewcommand{\coursenum}{X X}
+\xnewcommand{\coursetitle}{X}
+\xnewcommand{\instructor}{X X}
+\xnewcommand{\term}{X 201X}
+
+\def\jmlrheading{\thispagestyle{plain}}
+\jmlrheading{}
+\ShortHeadings{\coursenum \coursetitle}{\name}
+\firstpageno{1}
 
 \begin{document}
 
-\frontmatter
+\title{\coursenum \coursetitle}
+\author{\name Dustin Tran \email dtran@g.harvard.edu\\
+\addr Department of Statistics\\
+Harvard University\\
+Cambridge, MA 02138, USA
+\AND
+Instructor:\\
+% [Delete when using template]
+% email and address of instructor
+% [Delete when using template]
+\name \instructor \email anonymous@harvard.edu\\
+\addr Department of Statistics\\
+Harvard University\\
+Cambridge, MA 02138, USA
+}
+
 \maketitle
-\begingroup
-\let\cleardoublepage\clearpage
+% [Delete when using template]
+% "Professor" or "Instructor" or "Lecturer"
+% [Delete when using template]
+\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
+This document is a compilation of lecture notes for X \instructor's
+\coursenum course in \coursetitle, during the term of \term. Please send
+feedback and/or corrections to {dtran@g.harvard.edu}. More broadly, I can be
+reached at {dustintran.com}.
+\end{abstract}
+
 \tableofcontents
 
-\chapter*{Preface}
-\addcontentsline{toc}{chapter}{Preface}
-% [Delete when using template]
-% "Professor "/"Instructor" first_name last_name department course_number
-% institution term
-% [Delete when using template]
-This document is a compilation of lecture notes for X X X's X X course in X,
-during the term of X.  I do not claim these notes to be fully accurate or
-comprehensive, nor do I claim this document holds any officiality over
-the course. It contains exposition subject to my discretion. Please send
-feedback, corrections, etc.\ to {dtran@g.harvard.edu}.  More broadly, I can be
-reached at {dustintran.com}.
+\input{lecture_01}
 
-\mainmatter
-\endgroup
-
-%\input{lecture_01}
-
+\clearpage
 \bibliography{lecture}
 
 \end{document}
