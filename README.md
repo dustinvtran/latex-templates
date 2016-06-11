@@ -2,7 +2,7 @@
 
 Here are all templates I personally use for any LaTeX-specific task.
 
-Use `[latexmk](https://www.ctan.org/pkg/latexmk/?lang=en)`. It's
+Use [`latexmk`](https://www.ctan.org/pkg/latexmk/?lang=en). It's
 powerful. My day-to-day use is just with `latexmk -C` and `latexmk
 -pdf main` in the terminal. (I use Vim as my text editor and don't
 resort to IDE-like editors; I'm bad at understanding complicated
