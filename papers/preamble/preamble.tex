@@ -4,15 +4,15 @@
 \usepackage{tgtermes}
 
 % NOTE: MUST INSTALL SEPARATELY
-%\usepackage[subscriptcorrection,
-%           amssymbols,
-%           mtpbb,
-%           mtpcal,
-%           nofontinfo  % suppresses all warnings
-%          ]{mtpro2}
+\usepackage[subscriptcorrection,
+           amssymbols,
+           mtpbb,
+           mtpcal,
+           nofontinfo  % suppresses all warnings
+          ]{mtpro2}
 % NOTE: MUST UNCOMMENT IF NOT USING MTPRO2
-\usepackage{amssymb}
-\newcommand{\mathbold}[1]{\ensuremath{\boldsymbol{\mathbf{#1}}}}
+%\usepackage{amssymb}
+%\newcommand{\mathbold}[1]{\ensuremath{\boldsymbol{\mathbf{#1}}}}
 
 \usepackage{scalefnt,letltxmacro}
 \LetLtxMacro{\oldtextsc}{\textsc}
@@ -28,8 +28,8 @@
 
 \usepackage[
   paper  = letterpaper,
-  left   = 1.50in,
-  right  = 1.50in,
+  left   = 1.25in,
+  right  = 1.25in,
   top    = 1.0in,
   bottom = 1.0in,
   ]{geometry}
@@ -115,11 +115,6 @@
 \usepackage
 [acronym,smallcaps,nowarn,section,nogroupskip,nonumberlist]{glossaries}
 \glsdisablehyper{}
-% \usepackage{glossary-mcols}
-%\setglossarystyle{long3col}
-%\setlength\glsdescwidth{0.8\linewidth}
-%\setlength\glspagelistwidth{0pt}
-%\makeglossaries
 
 % # CODE SNIPPETS
 
@@ -143,6 +138,6 @@
 
 % # USEFUL COMMANDS
 
-\newcommand{\pp}{\P\,}
+\newcommand{\pp}{\textcolor{Plum}{\P\,}}
 \newcommand{\draftdisclaimer}{\begin{center}\begin{framed} DRAFT: DO
 NOT CITE OR DISTRIBUTE \end{framed}\end{center}}
