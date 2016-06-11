@@ -1,0 +1,40 @@
+\documentclass[twoside,11pt]{article}
+\usepackage{jmlr2e}
+
+\input{preamble/preamble.tex}
+\input{preamble/preamble_acronyms.tex}
+\input{preamble/preamble_math.tex}
+\input{preamble/preamble_tikz.tex}
+\setlength{\marginparwidth}{0.8in} % For 1.0in margins
+
+\def\jmlrheading{\thispagestyle{plain}}
+\jmlrheading{}
+\ShortHeadings{Shortened Title}{Tran}
+\firstpageno{1}
+
+\begin{document}
+
+\title{Title}
+\author{\name Dustin Tran \email dustin@cs.columbia.edu\\
+\addr Department of Computer Science\\
+Columbia University\\
+New York, NY 10027, USA
+}
+
+%\editor{}
+
+\maketitle
+\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
+\end{abstract}
+
+%\begin{keywords}
+%\end{keywords}
+
+\section*{Acknowledgements}
+\PP We thank people and funding sources here.
+
+\clearpage
+
+\bibliography{bib}
+
+\end{document}

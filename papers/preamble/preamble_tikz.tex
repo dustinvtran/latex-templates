@@ -1,0 +1,43 @@
+\usepackage{tikz}
+
+\usetikzlibrary{bayesnet}
+% \usetikzlibrary{external}\tikzexternalize
+
+\pgfdeclarelayer{edgelayer}
+\pgfdeclarelayer{nodelayer}
+\pgfsetlayers{edgelayer,nodelayer,main}
+
+\definecolor{hexcolor0xbfbfbf}{rgb}{0.749,0.749,0.749}
+
+\tikzset{>=latex}
+\tikzstyle{none}   = [inner sep=0pt]
+\tikzstyle{line}   = [ -, thick, shorten <=1pt, shorten >=1pt ]
+\tikzstyle{arrow}  = [ ->, thick, shorten <=1pt, shorten >=1pt ]
+\tikzstyle{ardash} = [ dashed, ->, thick, shorten <=1pt, shorten >=1pt ]
+
+\tikzstyle{empty}=[circle,opacity=0.0,text opacity=1.0,inner sep=0pt]
+\tikzstyle{box}=[rectangle,fill=White,draw=Black]
+\tikzstyle{filled}=[circle,thick,fill=hexcolor0xbfbfbf,draw=Black]
+\tikzstyle{hollow}=[circle,thick,fill=White,draw=Black]
+\tikzstyle{param}=[rectangle,fill=Black,draw=Black,inner sep=0pt,minimum width=4pt,minimum height=4pt]
+\tikzstyle{paramhollow}=[rectangle,thick,fill=White,draw=Black,inner sep=0pt,minimum
+width=4pt,minimum height=4pt]
+
+\usepackage{pgfplots}                               % PGFPLOTS baby!
+\pgfplotsset{compat=newest}
+\pgfplotsset{plot coordinates/math parser=false}
+\usepgfplotslibrary{statistics}
+% \usepgfplotslibrary{colorbrewer}                    % <-MUST INSTALL SEPARATELY!
+\newlength\figureheight
+\newlength\figurewidth
+\setlength\figureheight{1.75in}
+\setlength\figurewidth{2.5in}
+
+
+\newlength\figureheightsmall
+\newlength\figurewidthsmall
+\setlength\figureheightsmall{1.5in}
+\setlength\figurewidthsmall{1.85in}
+
+\definecolor{POSTcolor}{rgb}{0.48, 0.20, 0.58} %posterior
+\definecolor{Qcolor}{rgb}{0.00, 0.53, 0.22} %q
