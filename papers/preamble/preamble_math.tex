@@ -1,4 +1,29 @@
-\DeclareRobustCommand{\mb}[1]{\ensuremath{\boldsymbol{\mathbf{#1}}}}
+% # PROBABILITY
+
+\newcommand{\g}{\,|\,}
+\renewcommand{\gg}{\,\|\,}
+\DeclareRobustCommand{\KL}[2]{\ensuremath{\textrm{KL}\left(#1\;\|\;#2\right)}}
+
+% # DISTRIBUTIONS
+
+\newcommand{\Gam}{\textrm{Gam}}
+\newcommand{\InvGam}{\textrm{InvGam}}
+
+% # MISCELLANEOUS
+
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+\newcommand{\diag}{\textrm{diag}}
+\newcommand{\supp}{\textrm{supp}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand\indep{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+\newcommand{\E}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\rep}{\textrm{rep}}
+
+% # BOLD MATHEMATICS
 
 \newcommand{\mba}{\mathbold{a}}
 \newcommand{\mbb}{\mathbold{b}}
@@ -93,15 +118,3 @@
 \newcommand{\mbTheta}{\mathbold{\Theta}}
 \newcommand{\mbUpsilon}{\mathbold{\Upsilon}}
 \newcommand{\mbXi}{\mathbold{\Xi}}
-
-\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
-\newcommand{\g}{\,|\,}
-\renewcommand{\gg}{\,\|\,}
-\newcommand\dif{\mathop{}\!\mathrm{d}}
-\newcommand{\diag}{\textrm{diag}}
-\newcommand{\supp}{\textrm{supp}}
-\newcommand{\Gam}{\textrm{Gam}}
-\newcommand{\InvGam}{\textrm{InvGam}}
-\DeclareMathOperator*{\argmax}{arg\,max}
-\DeclareMathOperator*{\argmin}{arg\,min}
-\DeclareRobustCommand{\KL}[2]{\ensuremath{\textrm{KL}\left(#1\;\|\;#2\right)}}
