@@ -19,8 +19,7 @@ systems so I prefer simple applications.)
   ..., `99` corresponding to the lecture number.
 
 ### Papers
-+ `jmlr2e.sty`: The document class declaring packages, formatting, and macros,
-  taken from [JMLR](http://www.jmlr.org/author-info.html#Submission).
++ `preamble/`: The preamble.
 + `bib.bib`: The bibliography.
 + `main.tex`: A general-purpose template, e.g., for personal notes and
   unstylized conference or journal papers.
