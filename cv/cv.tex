@@ -1,0 +1,298 @@
+%!TEX program = pdflatex
+\documentclass[11pt]{article}
+
+% FONTS
+\usepackage[T1]{fontenc}
+\renewcommand*\ttdefault{lmvtt}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage{amsmath}
+\usepackage[scaled=0.92]{PTSans}
+
+% GEOMETRY
+\usepackage[
+  paper  = letterpaper,
+  left   = 1.0in,
+  right  = 1.0in,
+  top    = 1.25in,
+  bottom = 1.25in,
+]{geometry}
+
+% COLOR
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{shadecolor}{gray}{0.9}
+
+% SPACING and TEXT
+\usepackage[final,expansion=alltext]{microtype}
+\usepackage[english]{babel}
+\usepackage[parfill]{parskip}
+\usepackage{afterpage}
+\usepackage{framed}
+\usepackage{enumitem}
+\usepackage{pifont}     % needed for dingbats for colophon
+
+% HEADERS
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\lhead{\textcolor{gray}{\emph{Dustin Tran}}}
+\rhead{\textcolor{gray}{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+
+% Renew section
+\renewcommand{\section}[1]
+{\vspace{1.0\baselineskip}{\Large\textbf{#1}}}
+
+% Generate colophon at the end of the document
+\newcommand{\makecolophon}
+{\centering\ding{118} Last modified on \today~\ding{118}}
+
+\begin{document}
+\thispagestyle{empty}
+
+\parbox[c][0.5in]{3.4in}{\huge \textbf{Dustin Tran}}
+\parbox[c][0.5in]{2.5in}{%
+\small
+\vspace{17ex}
+\texttt{dustin@cs.columbia.edu}
+\texttt{http://www.dustintran.com/}
+}
+
+Ph.D. Student \\
+Columbia University \\
+Department of Computer Science \\
+New York, NY
+
+\section{Education}
+
+\begin{itemize}[leftmargin=12pt]
+  \item[] Ph.D.~Computer Science, Columbia University \hfill
+  2016--\\
+  Advisors: David M.~Blei, Andrew Gelman
+  \item[] M.S.~Computational Science \& Engineering, Harvard University \hfill
+  2014--2015\\
+  Advisor: Edoardo M.~Airoldi
+  \item[] B.A.~(Hon.) Mathematics, Statistics, University of
+  California, Berkeley \hfill 2010--2014
+\end{itemize}
+
+\section{Employment}
+
+\begin{itemize}[leftmargin=12pt]
+  \item[] Visiting Researcher \hfill 2016\\
+  Graduate School of Business, Stanford University\\
+  Supervisor: Susan Athey\\
+  Collaborators: Matt Hoffman, Kevin Murphy
+  \item[] Visiting Researcher \hfill 2015\\
+  Department of Statistics and Computer Science, Columbia University\\
+  Supervisors: David M.~Blei, Andrew Gelman
+\end{itemize}
+
+\section{Awards}
+
+\begin{itemize}[leftmargin=12pt]
+  \item[] Adobe Research Fellowship (\$10,000)
+  \hfill 2016
+  \item[] Columbia SEAS Fellowship (Full funding)
+  \hfill 2016--
+  \item[] LinkedIn Economic Graph Challenge
+  \hfill 2015
+  \item[] Harvard GSAS Fellowship (Full funding)
+  \hfill 2015
+  \item[] Dorothea Klumpke Roberts Prize in Mathematics
+  \hfill 2014
+  \item[] Regents' and Chancellor's Scholarship (Full funding)
+  \hfill 2010--2014
+  \item[] Rose Hills Foundation Science \& Engineering Grant (\$5,000)
+  \hfill 2013
+  \item[] Cal Alumni Leadership Scholarship (\$2,500)
+  \hfill 2010
+\end{itemize}
+
+\section{Publications}
+
+\textsc{Preprints}
+\begin{enumerate}
+  \item
+  \textbf{D.~Tran}, A.~Gelman, and A.~Vehtari.
+  Gradient-based marginal optimization.
+  \item
+  \textbf{D.~Tran}, A.~Kucukelbir, A.~Gelman, B.~Carpenter, and D.M.~Blei.
+  Stan: Generalizing and automating variational inference.
+  \item
+  \textbf{D.~Tran}, F.~Ruiz, S.~Athey, and D.M.~Blei.
+  Validating causal models.
+  \item
+  R.~Ranganath, \textbf{D.~Tran}, J.~Altosaar, and D.M.~Blei.
+  Operator variational inference.
+  \item
+  A.~Dieng, \textbf{D.~Tran}, R.~Ranganath, J.~Paisley, and D.M.~Blei.
+  The $\chi$ divergence for approximate inference.
+  \item
+  G.~Basse, J.~Pouget-Abadie, \textbf{D.~Tran}, E.M.~Airoldi, Y.~Xu, and
+  S.~Ghosh.
+  Naive A/B tests for link formation algorithms lead to biased
+  performance evaluations.
+  \item
+  A.~Kucukelbir, \textbf{D.~Tran}, R.~Ranganath, A.~Gelman, and D.M.~Blei.
+  Automatic differentiation variational inference.
+  \item
+  \textbf{D.~Tran}, P.~Toulis, and E.M.~Airoldi.
+  Stochastic gradient descent methods for estimation with large data sets.
+\end{enumerate}
+
+%\textsc{Books}
+%\textsc{Edited Volumes}
+%\textsc{Book Chapters}
+%\textsc{Refereed Journal Papers}
+
+\textsc{Refereed Conference Papers}
+\begin{enumerate}[resume]
+  \item
+  R.~Ranganath, \textbf{D.~Tran}, and D.M.~Blei.
+  Hierarchical variational models.
+  In \emph{International Conference on Machine Learning}, 2016.
+  \item
+  \textbf{D.~Tran}, M.~Kim, and F.~Doshi-Velez.
+  Spectral M-estimation with application to hidden Markov models.
+  In \emph{Artificial Intelligence and Statistics}, 2016.
+  \item
+  P.~Toulis, \textbf{D.~Tran}, and E.M.~Airoldi.
+  Towards stability and optimality in stochastic gradient descent.
+  In \emph{Artificial Intelligence and Statistics}, 2016.
+  \item
+  \textbf{D.~Tran}, R.~Ranganath, and D.M.~Blei.
+  The variational Gaussian process.
+  In \emph{International Conference on Learning Representations}, 2016.
+  %(Oral Presentation)
+  \item
+  \textbf{D.~Tran}, D.M.~Blei, and E.M.~Airoldi.
+  Copula variational inference.
+  In \emph{Neural Information Processing Systems}, 2015.
+\end{enumerate}
+
+%\textsc{Refereed Workshop Papers}
+%\textsc{Acknowledgements}
+
+%\section{Popular Press}
+%\section{Awarded Grants}
+%\section{Software}
+
+%\section{Industry}
+
+\section{Teaching}
+\begin{enumerate}
+  \item
+  Teaching Fellow |
+  Harvard University
+  \hfill 2015
+  \\
+  AM 205:
+  Advanced Scientific Computing--Numerical Methods
+  \item
+  Teaching Assistant |
+  University of California, Berkeley
+  \hfill 2013
+  \\
+  MATH 10B:
+  Methods in Calculus, Statistics, Combinatorics
+  \item
+  Teaching Assistant |
+  University of California, Berkeley
+  \hfill 2011
+  \\
+  MATH 128A:
+  Numerical Analysis
+\end{enumerate}
+
+\section{Professional Service}
+
+%\textsc{Senior Program Committee}
+%\textsc{Associate Editor and Editorial Board}
+%\textsc{Journal Reviewing and Editorial Board}
+%\textsc{Journal Reviewing}
+%\textsc{Conference Reviewing}
+\textsc{Reviewing}
+\begin{itemize}[leftmargin=12pt]
+  \item[] Foundations and Trends in Machine Learning \hfill 2016
+  \item[] International Conference on Learning Representations \hfill 2016
+  \item[] International Conference on Machine Learning \hfill 2016
+  \item[] Knowledge Discovery and Data Mining \hfill 2016
+  \item[] Neural Information Processing Systems \hfill 2016
+  \item[] Uncertainty in Artificial Intelligence \hfill 2016
+\end{itemize}
+
+\textsc{Workshop Organization}
+\begin{itemize}[leftmargin=12pt]
+  \item[] NIPS: Advances in Approximate Bayesian Inference \hfill 2015
+\end{itemize}
+
+\textsc{Professional Memberships}
+\begin{itemize}[leftmargin=12pt]
+  \item[] American Statistical Association
+  \item[] Association of Computing Machinery
+  \item[] Bernoulli Society
+  \item[] Institute of Electrical and Electronics Engineers
+  \item[] Institute for Mathematical Statistics
+  \item[] International Society for Bayesian Analysis
+  \item[] Royal Statistical Society
+\end{itemize}
+
+%\textsc{Grant Reviewing}
+%\textsc{Former Ph.D. Students}
+%\textsc{Current Ph.D. Students}
+%\textsc{Postdoctoral Fellows}
+%\textsc{Other Ph.D. Thesis Committees}
+%\textsc{Mentoring}
+%\textsc{Advising and Consulting}
+
+\section{Invited Talks}
+\begin{enumerate}
+  \item
+  Google Brain
+  -- \textsc{mountain view, ca}
+  \hfill 2016
+  \item
+  International Conference on Learning Representations
+  -- \textsc{san juan, pr}
+  \hfill 2016
+  \item
+  PPAML/DARPA Meeting
+  -- \textsc{new york, ny}
+  \hfill 2016
+  \item
+  Harvard University
+  -- \textsc{cambridge, ma}
+  \hfill 2016
+  \item
+  NIPS Workshop: Advances in Approximate Bayesian Inference
+  -- \textsc{montreal, ca}
+  \hfill 2015
+  \item
+  NIPS Workshop: Black Box Learning and Inference
+  -- \textsc{montreal, ca}
+  \hfill 2015
+  \item
+  Massachusetts Institute of Technology
+  -- \textsc{cambridge, ma}
+  \hfill 2015
+  \item
+  Harvard University
+  -- \textsc{cambridge, ma}
+  \hfill 2015
+  \item
+  Microsoft Research
+  -- \textsc{cambridge, ma}
+  \hfill 2015
+  \item
+  University of Connecticut
+  -- \textsc{storrs, ct}
+  \hfill 2015
+  \item Max Planck Institute for Intelligent Systems
+  -- \textsc{t\"{u}bingen, de}
+  \hfill 2015
+\end{enumerate}
+
+%\vfill
+%\makecolophon
+
+\end{document}
