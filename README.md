@@ -1,7 +1,6 @@
 # LaTeX templates
 
-This repository stores all LaTeX templates I personally use in producing
-typewritten documents for research, courses, and miscellanea.
+Here are all templates I personally use for any LaTeX-specific task.
 
 ## Directory
 
