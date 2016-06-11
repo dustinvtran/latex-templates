@@ -15,6 +15,9 @@ example of what my settings compile to:
 
 ## Directory
 
+Use `latexmk`. It's powerful. My day-to-day use is just with
+`latexmk -C` and `latexmk -pdf main`.
+
 ### Curriculum Vitae
 + `cv.tex`: The general structure I use for my CV.
 
