@@ -3,16 +3,6 @@
 This repository stores all LaTeX templates I personally use in producing
 typewritten documents for research, courses, and miscellanea.
 
-## Examples
-Here is an example of my lecture notes.
-
-![](notes.png)
-
-I use the `listings` package to produce my verbatim environment. Here is an
-example of what my settings compile to:
-
-![](listings.png)
-
 ## Directory
 
 Use `latexmk`. It's powerful. My day-to-day use is just with
@@ -40,3 +30,13 @@ Use `latexmk`. It's powerful. My day-to-day use is just with
 + `main_X.tex`: A template for documents which lay out answers to a
   list of exercises. `X` is `01`, `02`, ..., `99` corresponding to the
   problem set number.
+
+## Examples
+Here is an example of my lecture notes.
+
+![](notes.png)
+
+I use the `listings` package to produce my verbatim environment. Here is an
+example of what my settings compile to:
+
+![](listings.png)
