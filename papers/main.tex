@@ -1,40 +1,68 @@
-\documentclass[twoside,11pt]{article}
-\usepackage{jmlr2e}
-
+\documentclass[12pt]{article}
 \input{preamble/preamble.tex}
 \input{preamble/preamble_acronyms.tex}
 \input{preamble/preamble_math.tex}
 \input{preamble/preamble_tikz.tex}
-\setlength{\marginparwidth}{0.8in} % For 1.0in margins
+\setlength{\marginparwidth}{1.25in}
 
-\def\jmlrheading{\thispagestyle{plain}}
-\jmlrheading{}
-\ShortHeadings{Shortened Title}{Tran}
-\firstpageno{1}
+\title{%
+\textbf{Validating Causal Models}
+}
+
+\author{
+Dustin Tran \\
+Columbia University \\
+\\
+Francisco J.~R.~Ruiz \\
+Columbia University \\
+\\
+Susan Athey \\
+Stanford University \\
+\\
+David M.~Blei \\
+Columbia University \\
+}
 
 \begin{document}
 
-\title{Title}
-\author{\name Dustin Tran \email dustin@cs.columbia.edu\\
-\addr Department of Computer Science\\
-Columbia University\\
-New York, NY 10027, USA
-}
-
-%\editor{}
-
 \maketitle
-\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
+\bigskip
+
+\begin{abstract}
+  The goal of causal inference is to understand the outcome of
+  alternative courses of action.  However, all causal inference
+  requires assumptions---more so than for standard tasks in
+  probabilistic modeling---and testing those assumptions is important
+  to assess the validity of a causal model. We develop Bayesian model
+  criticism for causal inference, building on the idea of posterior
+  predictive checks to assess model fit. Our approach involves
+  decomposing the problem, separately criticizing the model of
+  treatment assignments and the model of outcomes.  Further we
+  discuss how and when we can check the central assumption of
+  unconfoundedness, which enables causal statements from observational
+  data.  Our approach provides a foundation for diagnosing causal
+  inferences from observational data.
 \end{abstract}
 
-%\begin{keywords}
-%\end{keywords}
+\emph{Keywords:}
+Causal Inference;
+Probabilistic Models;
+Bayesian Analysis;
+Model Checking.
 
-\section*{Acknowledgements}
-\PP We thank people and funding sources here.
+\clearpage
+\glsresetall{}
+
+\input{sec_intro}
 
 \clearpage
 
+\bibliographystyle{apalike}
 \bibliography{bib}
+
+\clearpage
+\appendix
+
+\input{sec_appendix}
 
 \end{document}
