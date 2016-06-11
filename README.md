@@ -2,10 +2,11 @@
 
 Here are all templates I personally use for any LaTeX-specific task.
 
-Use `latexmk`. It's powerful. My day-to-day use is just with
-`latexmk -C` and `latexmk -pdf main` in the terminal. (I use Vim as my
-text editor and don't resort to complex IDE-like systems; I'm bad at
-understanding complicated systems so I prefer simple applications.)
+Use `[latexmk](https://www.ctan.org/pkg/latexmk/?lang=en)`. It's
+powerful. My day-to-day use is just with `latexmk -C` and `latexmk
+-pdf main` in the terminal. (I use Vim as my text editor and don't
+resort to IDE-like editors; I'm bad at understanding complicated
+systems so I prefer simple applications.)
 
 ### Curriculum Vitae
 + `cv.tex`: The general structure I use for my CV.
