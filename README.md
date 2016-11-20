@@ -22,14 +22,14 @@ In terms of packages:
 ## Curriculum Vitae
 <img src="img/cv.png" height="400">
 
-## Lecture Notes
-<img src="img/lectures.png" height="500">
-
 ## Papers
 <img src="img/papers.png" height="500">
 
+## Lectures
+<img src="img/lectures.png" height="500">
+
 ## Problem Sets
-<img src="img/problem-sets.png" height="400">
+<img src="img/problem-sets.png" width="600">
 
 ## Other Examples
 <img src="img/code.png" height="200">
