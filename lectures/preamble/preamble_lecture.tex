@@ -1,0 +1,51 @@
+% # Headers
+
+\newcommand{\lecturenum}{0}
+
+\newcommand{\handout}[5]{
+   \newpage
+   \renewcommand{\lecturenum}{#1}
+   % TODO: The lecture titles should be chapters in a book, so each
+   % chapter has its own section + subsection hierarchy.
+   \addcontentsline{toc}{section}{Lecture #1 -- #2}
+   % \setcounter{chapter}{\lecturenum}
+   \setcounter{section}{0}
+   \begin{center}
+   \framebox{
+     \vbox{
+       \hbox to 5.78in { {\bf \coursenum \coursetitle} \hfill #5 }
+       \vspace{4mm}
+       \hbox to 5.78in { {\Large \hfill #2  \hfill} }
+       \vspace{2mm}
+       \hbox to 5.78in { {\it #3 \hfill #4} }
+     }
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+
+\newcommand{\handoutsection}[5]{
+   \newpage
+   \renewcommand{\lecturenum}{#1}
+   \addcontentsline{toc}{section}{Section #1 -- #2}
+   % \setcounter{chapter}{\lecturenum}
+   \setcounter{section}{0}
+   \let\oldthesection\thesection
+   \renewcommand*{\thesection}{S\oldthesection}
+   \begin{center}
+   \framebox{
+     \vbox{
+       \hbox to 5.78in { {\bf \coursenum \coursetitle} \hfill #5 }
+       \vspace{4mm}
+       \hbox to 5.78in { {\Large \hfill #2  \hfill} }
+       \vspace{2mm}
+       \hbox to 5.78in { {\it #3 \hfill #4} }
+     }
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+
+\newcommand{\lecturetitle}[3]{\handout{#1}{#2}{Lecturer: \instructor}{Date: #3}{Lecture #1}}
+\newcommand{\guestlecturetitle}[4]{\handout{#1}{#2}{Lecturer: #4}{Date: #3}{Lecture #1}}
+\newcommand{\sectionlecturetitle}[3]{\handoutsection{#1}{#2}{Lecturer: \assistant}{Date: #3}{Section #1}}

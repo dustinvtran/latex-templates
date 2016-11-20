@@ -19,36 +19,20 @@ In terms of packages:
 + I use mtpro2 as a default font. It is proprietary and requires
   manual installation.
 
-## Templates
+## Curriculum Vitae
+<img src="img/cv.png" height="400">
 
-### Curriculum Vitae
-+ `cv.tex`: The general structure I use for my CV.
+## Lecture Notes
+<img src="img/lectures.png" height="500">
 
-### Lecture Notes
-+ `lecture.cls`: The document class declaring packages, formatting, and macros.
-+ `main.tex`: A template for the master document used in compiling the
-  collection of lecture notes.
-+ `main_X.tex`: A template for individual lectures. `X` is `01`, `02`,
-  ..., `99` corresponding to the lecture number.
+## Papers
+<img src="img/papers.png" height="500">
 
-### Papers
-+ `preamble/`: The preamble.
-+ `bib.bib`: The bibliography.
-+ `main.tex`: A general-purpose template, e.g., for personal notes and
-  unstylized conference or journal papers.
+## Problem Sets
+<img src="img/problem-sets.png" height="400">
 
-### Problem Sets
-+ `pset.cls`: The document class declaring packages, formatting, and macros.
-+ `main_X.tex`: A template for documents which lay out answers to a
-  list of exercises. `X` is `01`, `02`, ..., `99` corresponding to the
-  problem set number.
+## Other Examples
+<img src="img/code.png" height="200">
 
-## Examples
-Here is an example of my lecture notes.
-
-![](notes.png)
-
-I use the `listings` package to produce my verbatim environment. Here is an
-example of what my settings compile to:
-
-![](listings.png)
+I use the `listings` package for code snippets, with custom syntax
+highlighting.
