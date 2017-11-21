@@ -30,6 +30,21 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{shadecolor}{gray}{0.9}
 
+% # BIBLIOGRAPHY
+
+\usepackage{bibentry}
+\let\oldbibentry\bibentry
+\renewcommand{\bibentry}[1]{\oldbibentry{#1}.}
+\def\FormatName#1{%
+  \def\myname{D. Tran}%
+  \edef\name{#1}%
+  \ifx\name\myname
+    \textbf{#1}%
+  \else
+    #1%
+  \fi
+}
+
 % # HEADERS
 
 \usepackage{fancyhdr}
@@ -48,6 +63,8 @@
 {\centering\ding{118} Last modified on \today~\ding{118}}
 
 \begin{document}
+\bibliographystyle{plain-custom}
+\nobibliography{bib}
 \thispagestyle{empty}
 
 \parbox[c][0.5in]{3.4in}{\huge \textbf{Dustin Tran}}
@@ -73,8 +90,8 @@ New York, NY
 \section{Employment}
 
 \begin{itemize}[leftmargin=12pt]
-  \item[] Visiting Researcher \hfill 2015\\
-  Department of Statistics and Computer Science, Columbia University\\
+  \item[] Visiting Researcher \hfill 2015 \\
+  Department of Statistics and Computer Science, Columbia University \\
   Supervisors: David M.~Blei, Andrew Gelman
 \end{itemize}
 
@@ -89,9 +106,7 @@ New York, NY
 
 \textsc{Preprints}
 \begin{enumerate}
-  \item
-  \textbf{D.~Tran}, P.~Toulis, and E.M.~Airoldi.
-  Stochastic gradient descent methods for estimation with large data sets.
+  \item \bibentry{gelman2017expectation}
 \end{enumerate}
 
 % \textsc{Books}
@@ -100,35 +115,31 @@ New York, NY
 
 \textsc{Journal Articles}
 \begin{enumerate}[resume]
-  \item
-  A.~Kucukelbir, \textbf{D.~Tran}, R.~Ranganath, A.~Gelman, and D.M.~Blei.
-  Automatic differentiation variational inference.
-  \textit{Journal of Machine Learning Research}, To appear.
+  \item \bibentry{kucukelbir2017automatic}
 \end{enumerate}
 
 \textsc{Conference Articles}
 \begin{enumerate}[resume]
-  \item
-  \textbf{D.~Tran}, D.M.~Blei, and E.M.~Airoldi.
-  Copula variational inference.
-  In \emph{Neural Information Processing Systems}, 2015.
+  \item \bibentry{tran2015copula}
 \end{enumerate}
 
 % \textsc{Workshop Articles}
+
 % \textsc{Acknowledgements}
+
 \section{Software}
+
 \begin{enumerate}
   \item
-  {sgd}: An R package for large-scale estimation
+  sgd: An R package for large-scale estimation
   \hfill
-  2015
+  2015--
   \\
   \textbf{D.~Tran}, P.~Toulis, and E.M.~Airoldi.
 \end{enumerate}
 
 % \section{Popular Press}
 % \section{Awarded Grants}
-
 % \section{Industry}
 
 \section{Teaching}
@@ -148,7 +159,7 @@ New York, NY
 % \textsc{Associate Editor and Editorial Board}
 \textsc{Journal Reviewing}
 \begin{itemize}[leftmargin=12pt]
-  \item[] Foundations and Trends in Machine Learning \hfill 2016
+  \item[] Foundations and Trends in Machine Learning \hfill 2016--
 \end{itemize}
 
 \textsc{Conference Reviewing}
@@ -175,6 +186,7 @@ New York, NY
 % \textsc{Advising and Consulting}
 
 \section{Invited Talks and Panels}
+
 \begin{enumerate}
   \item Max Planck Institute for Intelligent Systems
   -- \textsc{t\"{u}bingen, de}
