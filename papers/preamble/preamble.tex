@@ -2,6 +2,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{tgtermes}
+\usepackage[utf8]{inputenc}
 
 % NOTE: MUST INSTALL SEPARATELY
 \usepackage[subscriptcorrection,
@@ -43,6 +44,16 @@
 
 % # EDITING
 
+\renewenvironment{leftbar}[1][\hsize] {%
+  \def\FrameCommand {%
+    {\color{Gray}\vrule width 3pt}%
+    \hspace{10pt}%
+    %\hspace{0pt}\fboxsep=\FrameSep\colorbox{black!10}%
+  }%
+  \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}%
+{\endMakeFramed}
+
 \usepackage{lineno}
 \renewcommand\linenumberfont{\normalfont
                              \footnotesize
@@ -61,7 +72,7 @@
     \leavevmode\marginpar[\hfill\parnum]{\parnum}%
 }
 \DeclareRobustCommand{\parhead}[1]{\textbf{#1}~}
-\setlength{\marginparwidth}{1.25in}
+\setlength{\marginparwidth}{1.0in}
 
 % # COLOR
 
@@ -85,11 +96,11 @@
 
 \usepackage{graphicx}
 \usepackage[labelfont=bf]{caption}
-\usepackage[format=hang]{subcaption}
+\usepackage{subcaption}
 
 % # TABLES
 
-\usepackage{booktabs, array}
+\usepackage{booktabs,array}
 
 % # ALGORITHMS
 
@@ -107,13 +118,16 @@
 \hypersetup{citecolor=MidnightBlue}
 \hypersetup{linkcolor=MidnightBlue}
 \hypersetup{urlcolor=MidnightBlue}
+
 \usepackage[nameinlink]{cleveref}
+\crefname{section}{§}{§§}
+\Crefname{section}{§}{§§}
 \creflabelformat{equation}{#2\textup{#1}#3}  % <- remove parenthesis from equations
 
 % # ACRONYMS
 
 \usepackage
-[acronym,smallcaps,nowarn,section,nogroupskip,nonumberlist]{glossaries}
+[acronym,smallcaps,nowarn,section,nonumberlist]{glossaries}
 \glsdisablehyper{}
 
 % # CODE SNIPPETS

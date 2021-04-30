@@ -2,22 +2,7 @@
 
 \newcommand{\g}{\,|\,}
 \renewcommand{\gg}{\,\|\,}
-\DeclareRobustCommand{\KL}[2]{\ensuremath{\textrm{KL}\left(#1\;\|\;#2\right)}}
-
-% # DISTRIBUTIONS
-
-\newcommand{\Gam}{\textrm{Gam}}
-\newcommand{\InvGam}{\textrm{InvGam}}
-
-% # MISCELLANEOUS
-
 \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
-\newcommand{\diag}{\textrm{diag}}
-\newcommand{\supp}{\textrm{supp}}
-\DeclareMathOperator*{\argmax}{arg\,max}
-\DeclareMathOperator*{\argmin}{arg\,min}
-\newcommand\indep{\protect\mathpalette{\protect\independenT}{\perp}}
-\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
 
 % # BOLD MATHEMATICS
 
@@ -125,3 +110,17 @@
 \newcommand{\mbseven}{\mathbold{7}}
 \newcommand{\mbeight}{\mathbold{8}}
 \newcommand{\mbnine}{\mathbold{9}}
+
+% # DISTRIBUTIONS
+
+\newcommand{\Gam}{\textrm{Gam}}
+\newcommand{\InvGam}{\textrm{InvGam}}
+
+% # MISCELLANEOUS
+
+\newcommand{\diag}{\textrm{diag}}
+\newcommand{\supp}{\textrm{supp}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand\indep{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}

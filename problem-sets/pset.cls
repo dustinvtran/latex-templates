@@ -8,7 +8,7 @@
 % Base class
 %##############################################################################
 
-\LoadClass[10pt,letterpaper]{article}
+\LoadClass[11pt]{article}
 
 % "(no)submit" argument specifies whether to include credits in header.
 \newif\ifpset@submit
@@ -31,7 +31,7 @@
 \RequirePackage{fullpage}
 \RequirePackage{graphicx}
 \RequirePackage{mdframed}
-\RequirePackage{todonotes}
+\RequirePackage{natbib}
 
 %##############################################################################
 % Page Headings
