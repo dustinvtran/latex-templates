@@ -68,8 +68,7 @@ Style nits:
   not just Greek alphabet for extra symbols. For example, plain can
   represent a scalar and boldface (`\mathbf`) can represent a matrix
   or vector. I often leave capital letters to represent the event
-  space such as `a\in\mathbf{A}` or constants (number of datapoints
-  `N`).
+  space such as `a\in A` or constants: number of datapoints `N`.
 
 I made a
 [rant on Twitter in May 2021](https://twitter.com/dustinvtran/status/1398129705660805121).
