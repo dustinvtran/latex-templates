@@ -20,7 +20,7 @@ In terms of packages:
   manual installation.
 
 ## Curriculum Vitae
-<img src="img/cv.png" height="400">
+<img src="img/cv.png" height="500">
 
 ## Papers
 <img src="img/papers.png" height="500">
