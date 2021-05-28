@@ -43,6 +43,27 @@ code.
 
 <img src="img/draft-disclaimer.png" height="400">
 
+Style nits:
+
++ Don't write the extension to filenames. It's unnecessarily explicit
+  and less readable: use
+  `\input{preamble}` instead of
+  `\input{preamble.tex}`, and
+  `\includegraphics{figures/edward_calibration}` instead of
+  `\includegraphics{figures/edward_calibration.pdf}`.
++ Use PDF-rendered figures, not PNG, so that the text scales with the
+  paper format. You can even go a step further with TiKZ to make plots
+  in LaTeX.
++ Use author names in your citation style, not numbers: `(MacKay,
+  1992)` instead of `[12]`. Numbers save space but make it impossible
+  to know what the citation is without tediously crawling
+  back-and-forth. With author names, the citation is part of the
+  sentence, helping substantiate its statement:
+
+  > Weakly informative priors such as the Cauchy are often preferred
+  > for robustness as they concentrate less probability at the mean
+  > thanks to heavier tails (Gelman et al., 2006).
+
 I made a
 [rant on Twitter in May 2021](https://twitter.com/dustinvtran/status/1398129705660805121).
 Other nits and style tips are noted there.
