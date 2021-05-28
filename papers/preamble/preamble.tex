@@ -132,23 +132,12 @@
 
 % # CODE SNIPPETS
 
-\lstdefinestyle{mystyle}{
-    commentstyle=\color{OliveGreen},
-    numberstyle=\tiny\color{black!60},
-    stringstyle=\color{BrickRed},
-    basicstyle=\ttfamily\scriptsize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=none,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-}
-\lstset{style=mystyle}
+\definecolor{strings}{rgb}{.624,.251,.259}
+\definecolor{keywords}{rgb}{.224,.451,.686}
+\definecolor{comment}{rgb}{.322,.451,.322}
+
+\usepackage{minted}
+\newminted{python}{fontsize=\footnotesize,mathescape=True,escapeinside=@@}
 
 % # USEFUL COMMANDS
 

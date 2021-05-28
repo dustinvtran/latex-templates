@@ -32,7 +32,17 @@ In terms of packages:
 <img src="img/problem-sets.png" width="600">
 
 ## Other Examples
-<img src="img/code.png" height="200">
 
-I use the `listings` package for code snippets, with custom syntax
-highlighting.
+I use the `minted` package for code snippets.
+
+<img src="img/code.png" height="400">
+
+I'm a big fan of a custom `\draftdisclaimer` command when distributing
+paper drafts to colleagues. See `papers/preamble/preamble.tex` for its
+code.
+
+<img src="img/draft-disclaimer.png" height="400">
+
+I made a
+[rant on Twitter in May 2021](https://twitter.com/dustinvtran/status/1398129705660805121).
+Other nits and style tips are noted there.
